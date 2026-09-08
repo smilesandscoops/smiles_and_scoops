@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Smiles & Scoops</title>
-<meta name="description" content="Get in touch with Smiles & Scoops via Instagram or WhatsApp to place an order or ask a question." />
+<title>Bracelets — Smiles & Scoops</title>
+<meta name="description" content="Handmade bracelets from Smiles & Scoops. Order via Instagram or WhatsApp." />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -25,7 +25,7 @@
           <a href="jewelry.html">Jewellery</a>
           <ul class="dropdown">
             <li><a href="chains.html">Chains</a></li>
-            <li><a href="bracelets.html">Bracelets</a></li>
+            <li><a href="bracelets.html" class="active">Bracelets</a></li>
             <li><a href="earrings.html">Earrings</a></li>
             <li><a href="rings.html">Rings</a></li>
             <li><a href="hair-accessories.html">Hair Accessories</a></li>
@@ -34,7 +34,7 @@
         <li><a href="crochet.html">Crochet Flowers</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu">
@@ -47,29 +47,26 @@
 
   <section class="page-banner">
     <div class="container">
-      <span class="eyebrow">Say Hello</span>
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you — whether it's an order, a custom request, or just a question.</p>
+      <span class="eyebrow">Jewellery</span>
+      <h1>Bracelets</h1>
+      <p>Beaded, stone-studded, festive and everyday — 13 designs to choose from.</p>
     </div>
   </section>
 
   <section class="products">
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="icon">📷</div>
-          <h3>Instagram</h3>
-          <p>DM us @smiles_and_scoops — the fastest way to see new pieces and place an order.</p>
-          <a href="https://www.instagram.com/smiles_and_scoops" target="_blank" rel="noopener" class="btn btn-ig">Message on Instagram</a>
-        </div>
-        <div class="contact-card">
-          <div class="icon">💬</div>
-          <h3>WhatsApp</h3>
-          <p>Chat with us directly at +91 98834 32643 for orders and custom requests.</p>
-          <a href="https://wa.me/919883432643?text=Hi%20Smiles%20%26%20Scoops%2C%20I%27d%20like%20to%20get%20in%20touch!" target="_blank" rel="noopener" class="btn btn-wa">Chat on WhatsApp</a>
-        </div>
+      <div class="product-grid" id="product-grid"></div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Looking for Something Custom?</h2>
+      <p>Need a specific size or colour combination? Just ask.</p>
+      <div class="cta-actions">
+        <a href="https://www.instagram.com/smiles_and_scoops" target="_blank" rel="noopener" class="btn btn-ig">Message on Instagram</a>
+        <a href="https://wa.me/919883432643?text=Hi%20Smiles%20%26%20Scoops%2C%20I%27d%20like%20to%20ask%20about%20a%20custom%20bracelet." target="_blank" rel="noopener" class="btn btn-wa">Chat on WhatsApp</a>
       </div>
-      <p class="contact-note">Tip: let us know which product you're interested in (or describe your custom idea) so we can help you faster!</p>
     </div>
   </section>
 
@@ -108,5 +105,23 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/products.js"></script>
+<script>
+  renderProducts('product-grid', [
+    { name: 'Motif', price: '₹349', desc: 'A signature motif charm bracelet.' },
+    { name: 'Tulip', price: '₹329', desc: 'A tulip charm bracelet to match the chain.' },
+    { name: 'AD Stone', price: '₹549', desc: 'American Diamond stone-studded bracelet.' },
+    { name: 'Kada', price: '₹599', desc: 'A classic open-cuff kada.' },
+    { name: 'Enamel Bangle', price: '₹499', desc: 'Hand-enamelled bangle in vibrant colours.' },
+    { name: 'Navaratri Specials', price: '₹399', desc: 'Festive bracelets designed for Navaratri.' },
+    { name: 'Armlets', price: '₹549', desc: 'Statement armlet for a bold festive look.' },
+    { name: 'Gold Bracelet', price: '₹449', desc: 'Gold-toned bracelet for an everyday shine.' },
+    { name: 'Single Colour Beaded', price: '₹199', desc: 'Beaded bracelet in a single colourway.' },
+    { name: 'Multi Colour Beaded', price: '₹229', desc: 'Beaded bracelet in a mix of colours.' },
+    { name: 'Pearl Bead', price: '₹279', desc: 'Classic pearl-beaded bracelet.' },
+    { name: 'Evil Eye', price: '₹249', desc: 'Beaded bracelet with an evil eye charm for good luck.' },
+    { name: 'Rhine Stone', price: '₹399', desc: 'Sparkling rhinestone bracelet.' }
+  ]);
+</script>
 </body>
 </html>
