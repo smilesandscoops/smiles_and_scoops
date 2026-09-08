@@ -124,6 +124,55 @@ ul {
   border-color: var(--peach-dark);
 }
 
+/* Jewellery dropdown */
+
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown > a::after {
+  content: '▾';
+  margin-left: 4px;
+  font-size: 0.65em;
+  vertical-align: middle;
+}
+
+.dropdown {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cream-soft);
+  border: 1px solid var(--peach-light);
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 190px;
+  box-shadow: 0 14px 30px var(--shadow);
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 50;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  display: flex;
+}
+
+.dropdown a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  border-bottom: none;
+}
+
+.dropdown a:hover,
+.dropdown a.active {
+  background: var(--peach-light);
+  color: var(--charcoal);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -263,6 +312,18 @@ ul {
   flex-wrap: wrap;
 }
 
+.hero-secondary-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: var(--charcoal-soft);
+}
+
+.hero-secondary-link a {
+  text-decoration: underline;
+  color: var(--peach-dark);
+  font-weight: 600;
+}
+
 /* ---------- Page banner (for inner pages) ---------- */
 
 .page-banner {
@@ -322,7 +383,7 @@ section {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 28px;
 }
 
@@ -649,6 +710,27 @@ section {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .has-dropdown > a::after {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex;
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 4px 0 4px 0;
+    min-width: 0;
+  }
+
+  .dropdown a {
+    color: var(--charcoal-soft);
+    font-size: 0.85rem;
+    padding: 6px 0;
   }
 
   .category-grid,

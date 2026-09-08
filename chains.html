@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gallery — Smiles & Scoops</title>
-<meta name="description" content="A look at Smiles & Scoops handmade jewelry and crochet flowers." />
+<title>Chains — Smiles & Scoops</title>
+<meta name="description" content="Handmade chains from Smiles & Scoops. Order via Instagram or WhatsApp." />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
         <li class="has-dropdown">
           <a href="jewelry.html">Jewellery</a>
           <ul class="dropdown">
-            <li><a href="chains.html">Chains</a></li>
+            <li><a href="chains.html" class="active">Chains</a></li>
             <li><a href="bracelets.html">Bracelets</a></li>
             <li><a href="earrings.html">Earrings</a></li>
             <li><a href="rings.html">Rings</a></li>
@@ -32,7 +32,7 @@
           </ul>
         </li>
         <li><a href="crochet.html">Crochet Flowers</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -47,34 +47,25 @@
 
   <section class="page-banner">
     <div class="container">
-      <span class="eyebrow">A Peek Inside</span>
-      <h1>Gallery</h1>
-      <p>A few of our favorite makes — replace these with your own product photos any time.</p>
+      <span class="eyebrow">Jewellery</span>
+      <h1>Chains</h1>
+      <p>From minimal everyday chains to statement charm pieces — 16 designs to choose from.</p>
     </div>
   </section>
 
   <section class="products">
     <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f3b9a4/2b2420?text=Photo+1" alt="Gallery photo 1" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f8d9cc/2b2420?text=Photo+2" alt="Gallery photo 2" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f3b9a4/2b2420?text=Photo+3" alt="Gallery photo 3" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f8d9cc/2b2420?text=Photo+4" alt="Gallery photo 4" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f3b9a4/2b2420?text=Photo+5" alt="Gallery photo 5" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f8d9cc/2b2420?text=Photo+6" alt="Gallery photo 6" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f3b9a4/2b2420?text=Photo+7" alt="Gallery photo 7" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f8d9cc/2b2420?text=Photo+8" alt="Gallery photo 8" /></div>
-        <div class="gallery-item"><img src="https://placehold.co/500x500/f3b9a4/2b2420?text=Photo+9" alt="Gallery photo 9" /></div>
-      </div>
+      <div class="product-grid" id="product-grid"></div>
     </div>
   </section>
 
   <section class="cta-banner">
     <div class="container">
-      <h2>Follow Along for More</h2>
-      <p>New pieces are posted first on Instagram — come say hi!</p>
+      <h2>Looking for Something Custom?</h2>
+      <p>We can tweak length, charm, or colour on most chains — just ask.</p>
       <div class="cta-actions">
-        <a href="https://www.instagram.com/smiles_and_scoops" target="_blank" rel="noopener" class="btn btn-ig">Follow on Instagram</a>
+        <a href="https://www.instagram.com/smiles_and_scoops" target="_blank" rel="noopener" class="btn btn-ig">Message on Instagram</a>
+        <a href="https://wa.me/919883432643?text=Hi%20Smiles%20%26%20Scoops%2C%20I%27d%20like%20to%20ask%20about%20a%20custom%20chain." target="_blank" rel="noopener" class="btn btn-wa">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -114,5 +105,26 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/products.js"></script>
+<script>
+  renderProducts('product-grid', [
+    { name: 'Bow', price: '₹349', desc: 'A delicate bow pendant on a fine chain.' },
+    { name: 'Multi Charm', price: '₹499', desc: 'Multiple mini charms clustered on a single chain.' },
+    { name: 'Heart String', price: '₹399', desc: 'A string of tiny hearts along a delicate chain.' },
+    { name: 'Snake with Green Pendant', price: '₹549', desc: 'Sleek snake chain finished with a green stone pendant.' },
+    { name: 'Solid Heart', price: '₹399', desc: 'A bold solid heart pendant on a classic chain.' },
+    { name: 'Snake Plain', price: '₹349', desc: 'A sleek, minimal snake-link chain.' },
+    { name: 'Tulip', price: '₹379', desc: 'A single tulip charm on a delicate chain.' },
+    { name: 'Silver', price: '₹329', desc: 'Classic silver-tone chain, wear alone or layered.' },
+    { name: 'Minimal', price: '₹299', desc: 'An understated everyday chain, simple and clean.' },
+    { name: 'Multicolour', price: '₹399', desc: 'A playful chain with multicolour beads and accents.' },
+    { name: 'Stone Anti Tarnish', price: '₹549', desc: 'Studded with stones, finished in anti-tarnish plating.' },
+    { name: 'Enamel Flowers', price: '₹449', desc: 'Hand-enamelled flower charms along the chain.' },
+    { name: 'Cherry', price: '₹349', desc: 'A sweet cherry charm pendant, fun and colourful.' },
+    { name: 'Heart Ribbon', price: '₹399', desc: 'A heart pendant tied with a dainty ribbon detail.' },
+    { name: 'Tulip Stone', price: '₹429', desc: 'Tulip pendant set with a sparkling stone.' },
+    { name: 'Double Charm', price: '₹449', desc: 'Two charms paired together on one chain.' }
+  ]);
+</script>
 </body>
 </html>
