@@ -63,6 +63,39 @@ ul {
   padding: 0 24px;
 }
 
+/* ---------- Announcement Bar ---------- */
+
+.announcement-bar {
+  background: var(--peach);
+  color: var(--charcoal);
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.announcement-bar__track {
+  display: flex;
+  width: max-content;
+  animation: announcement-scroll 20s linear infinite;
+}
+
+.announcement-bar__item {
+  white-space: nowrap;
+  padding: 0 40px;
+}
+
+@keyframes announcement-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
