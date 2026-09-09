@@ -136,7 +136,7 @@ ul {
   margin-top: -4px;
 }
 
-.main-nav ul {
+.main-nav > ul {
   display: flex;
   gap: 28px;
 }
@@ -189,6 +189,7 @@ ul {
 }
 
 .has-dropdown:hover .dropdown,
+.has-dropdown.show-dropdown .dropdown,
 .has-dropdown:focus-within .dropdown {
   display: flex;
 }
@@ -735,7 +736,7 @@ section {
     transform: translateY(0);
   }
 
-  .main-nav ul {
+  .main-nav > ul {
     flex-direction: column;
     align-items: center;
     gap: 18px;

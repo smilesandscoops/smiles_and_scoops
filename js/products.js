@@ -8,13 +8,12 @@ function renderProducts(containerId, items) {
 
   items.forEach(function (item, index) {
     var color = colors[index % colors.length];
-    var imgText = encodeURIComponent(item.name.replace(/ /g, '+'));
     var waMessage = "Hi Smiles & Scoops, I'd like to order the " + item.name + ".";
 
     var card = document.createElement('div');
     card.className = 'product-card';
     card.innerHTML =
-      '<img class="product-img" loading="lazy" src="https://placehold.co/500x500/' + color + '/2b2420?text=' + imgText + '" alt="' + item.name + '" />' +
+      '<img class="product-img" loading="lazy" src="https://placehold.co/500x500/' + color + '/2b2420?text=Photo" alt="' + item.name + '" />' +
       '<div class="product-info">' +
         '<h3></h3>' +
         '<p class="price"></p>' +
